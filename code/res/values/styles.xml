@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="subtitleTextColor">#594f5b</item>
+        <!--<item name="colorAccent">#2B6FD5</item>-->
+        <!--<item name="android:colorBackground">#808080</item>-->
+    </style>
+
+    <style name="AppThemeLignt" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">#000000</item>
+        <item name="subtitleTextColor">#4D4DB3</item>
+        <item name="android:editTextBackground">@drawable/border</item>
+    </style>
+
+
+    <style name="AppThemeLignt.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeLignt.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

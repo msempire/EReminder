@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/container_type"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_type"
+            android:textColor="?subtitleTextColor"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingBottom="5dp"
+            android:id="@+id/txt_time"
+            android:text="@string/title_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_desc"
+        android:text="@string/title_desc"
+        android:textSize="@dimen/title_txt_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/container_type"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <CheckBox
+        android:visibility="invisible"
+        android:id="@+id/checkbox_del"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txt_state"
+        android:layout_below="@id/txt_desc"
+        android:text="@string/title_state"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="@dimen/status_txt_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txt_intro"
+        android:layout_below="@id/txt_state"
+        android:text="@string/title_txt_comment"
+        android:textSize="@dimen/status_txt_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/container_ope"
+        android:divider="@drawable/shape_divider"
+        android:showDividers="middle"
+        android:layout_below="@id/txt_desc"
+        android:orientation="horizontal"
+        android:background="?colorButtonNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_undone"
+            android:text="@string/btn_txt_undone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_done"
+            android:text="@string/btn_txt_done"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_comment"
+            android:text="@string/btn_txt_comment"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_ope2"
+        android:divider="@drawable/shape_divider"
+        android:showDividers="middle"
+        android:visibility="invisible"
+        android:layout_below="@id/txt_desc"
+        android:orientation="horizontal"
+        android:background="?colorButtonNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_modify"
+        android:text="@string/btn_txt_modify"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_del"
+        android:text="@string/btn_txt_del"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_ope3"
+        android:divider="@drawable/shape_divider"
+        android:showDividers="middle"
+        android:visibility="invisible"
+        android:layout_below="@id/txt_desc"
+        android:orientation="horizontal"
+        android:background="?colorButtonNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_add_today"
+            android:text="@string/btn_txt_add_today"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_add_tomorrow"
+            android:text="@string/btn_txt_add_tomorrow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

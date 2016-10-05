@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?colorPrimaryDark"
+        app:tabSelectedTextColor="@android:color/background_light"
+        app:tabIndicatorColor="?colorAccent"
+        />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/title_desc"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/dur_container"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/title_dur_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/dur_edit"
+                android:inputType="number"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/edit_des_set"
+        android:textSize="@dimen/title_txt_size"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/type_container"
+        android:layout_below="@id/edit_des_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinner_type_set"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/type_edit"
+            android:visibility="invisible"
+            android:inputType="text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:paddingTop="20dp"
+        android:stretchColumns="1"
+        android:layout_below="@id/dur_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:background="?colorPrimary"
+            >
+            <TextView
+                android:text="@string/title_start_time"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:text="@string/title_end_time"
+                android:layout_gravity="center_horizontal"
+                />
+        </TableRow>
+
+        <TableRow android:background="?colorPrimary">
+
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker_start"
+                android:timePickerMode="spinner"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                />
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker_end"
+                android:timePickerMode="spinner"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:layout_gravity="end"/>
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="20dp"
+            >
+            <Button
+                android:id="@+id/btn_sure"
+                android:text="@string/btn_txt_sure"
+                android:layout_gravity="center_horizontal"
+                />
+            <Button
+                android:id="@+id/btn_cancel"
+                android:text="@string/btn_txt_cancel"
+                android:layout_gravity="center_horizontal"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
